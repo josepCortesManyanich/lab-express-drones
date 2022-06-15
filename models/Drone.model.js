@@ -1,8 +1,8 @@
 // Iteration #1
 const mongoose = require('mongoose');
-const { Schema } = new Schema
+const { Schema }= mongoose
 
-const droneModel ={
+const droneModel = new Schema({
     name:{
         type: String,
     },
@@ -12,7 +12,7 @@ const droneModel ={
     maxSpeed:{
         type: Number
     }
-}
+})
 
 const Drone = mongoose.model('Drone', droneModel)
 module.exports = Drone

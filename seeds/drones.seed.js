@@ -8,10 +8,10 @@ const newDrones = [
     { name: "Courier 3000i", propellers: 6, maxSpeed: 18 }
 ] 
 
-mongoose.connect()
-.then((x) => console.log (`Conected to ${x.collection.name}`))
+mongoose.connect("mongodb://localhost/lab-express-drones")
+.then((x) => console.log (`Conected to ${x.connection.name}`))
 .then(() => {
-    mongoose.create.Drone(newDrones)
+    return Drone.create(newDrones)
 })
 .catch((err) => {
     console.log(err)
