@@ -4,8 +4,13 @@
     <h1> Name = {{this.name}}</h1>
     <h1> Propellers = {{this.propellers}}</h1>
     <h1> Max Speed = {{this.maxSpeed}}</h1>
+    <a href="/drones/{{_id}}/edit"></a><
+    <form method="POST" action="/drones/{{_id}}/delete">
+        <button type="submit"></button>
+      </form>
     {{/each}}
 
     <a href="/drones/{{_id}}/edit"></a>
    
 </div>
+
