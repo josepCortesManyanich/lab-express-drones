@@ -6,8 +6,8 @@ const Drone = require ('../models/Drone.model')
 
 router.get('/drones', async (req, res, next) => {
   try{
-    const newDrone = await Drone.find({})
-    res.render('drones/list' , { newDrone })
+    const newDrone2 = await Drone.find({})
+    res.render('drones/list' , { newDrone2 })
   }
   catch(e){
     console.log(e)
@@ -51,7 +51,7 @@ router.post('/drones/:id/edit', async (req, res, next) => {
     const {name, propellers, maxSpeed} = req.body
     const propellersInt = parseInt(propellers);
     const speedInt = parseInt(maxSpeed);
-    await Drone.findByIdAndUpdate(_id, { name, propellers: propellersInt, maxSpeed: speedInt })
+    const newDrone2 = await Drone.findByIdAndUpdate(_id, { name, propellers: propellersInt, maxSpeed: speedInt })
     res.redirect('/drones/create')
   }
   catch(e){

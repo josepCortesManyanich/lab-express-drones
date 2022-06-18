@@ -1,4 +1,9 @@
 <h2>Update the drone</h2>
 <div>
-    <form  method= "action=""></form>
+    <h2>Name: {{this.name}}</h2>
+    <h2>Propellers:{{this.propellers}}</h2>
+    <h2>Max Speed: {{this.maxSpeed}}</h2>
+    <form  method="POST" action="/drones/{{this._id}}/edit"> </form>
+    <form action="POST" action="/drones/{{this.id}}/delete"></form>
+    <button>Delete</button>
 </div>
